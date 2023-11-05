@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(218, 248, 248);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #bedfe8;
+}
+.Accordion{
+max-width: 800px;
+}
+.Accordion .contentBx{
+position: relative;
+margin: 10px 20px;
+}
+.Accordion .contentBx .label{
+    position: relative;
+    padding: 10px;
+    background-color: #2694af;
+    color: #fff;
+    cursor: pointer;
+}
+.Accordion .contentBx .label::before{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.Accordion .contentBx .content{
+    position: relative;
+    height:0px;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+   
+    
+}
+
+.Accordion .contentBx.active .content{
+  height: 150px;  
+}
+
